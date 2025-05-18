@@ -8,19 +8,13 @@ import {useMediaQuery} from "react-responsive";
 
 
 const Hover = () => {
-        const isTablet = useMediaQuery({query: '(max-width: 1024px)'});
-        const isMobile = useMediaQuery({query: '(max-width: 768px)'});
-        const isIpad = useMediaQuery({query: '(max-width: 868px)'});
-
-
 
     return (
-        <Canvas shadows camera={{ position: [0, 0, 30], fov: 50}}>
+        <Canvas shadows camera={{ position: [0, 0, 25], fov: 50}}>
 
 
             <OrbitControls
                 enablePan={false}
-                enableZoom={!isTablet || !isMobile}
                 maxDistance={30}
                 minDistance={10}
                 minPolarAngle={Math.PI / 2}
@@ -33,7 +27,7 @@ const Hover = () => {
 
             <Float speed={10} rotationIntensity={0.5} floatIntensity={4}>
             <group
-                scale={isMobile || isIpad ? 2 : 4  }
+                scale={ 4 }
                 position={[0, -3.5, 0]}
                 rotation={[0, -Math.PI / 4, 0]}
             >

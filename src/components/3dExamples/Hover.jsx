@@ -33,8 +33,7 @@ const Hover = () => {
 
             <Float speed={10} rotationIntensity={0.5} floatIntensity={4}>
             <group
-                scale={isMobile? 2 : 4 }
-                scale={isIpad ? 2: 4}
+                scale={isMobile || isIpad ? 2 : 4  }
                 position={[0, -3.5, 0]}
                 rotation={[0, -Math.PI / 4, 0]}
             >

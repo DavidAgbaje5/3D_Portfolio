@@ -1,14 +1,20 @@
 import {counterItems} from "../constants/index.js";
 import CountUp from 'react-countup';
+import Skills from "./Skills.jsx";
 
 const AnimatedCounter = () => {
     return (
-        <div id="counter" className="padding-x-lg xl:mt-0 mt-32">
-            <div className="mx-auto grid-4-cols">
+        <div id="education" className="padding-x-lg xl:mt-0 mt-32">
+            <Skills
+                title="Education"
+            />
+            <div className="mx-auto grid-4-cols mt-14 relative">
                 {counterItems.map((item) => (
                     <div className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center ">
-                        <div key={counterItems.label} className="counter-number text-white text-5xl font-bold mb-2">
-                            <CountUp suffix={item.suffix} end={item.value} />
+                        <div key={counterItems.label} className="counter-number text-white text-5xl font-bold mb-2 break-words">
+                            {item.value === null ? item.suffix :
+                                <CountUp end={item.value} suffix={item.suffix} decimals={item.decimalPlaces} duration={7} />
+                            }
                         </div>
                         <div className="text-white-50 text-lg">{item.label}</div>
                     </div>

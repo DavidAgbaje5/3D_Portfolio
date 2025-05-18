@@ -4,7 +4,6 @@ import {OrbitControls} from "@react-three/drei";
 import {useMediaQuery} from "react-responsive";
 import {Room} from "./Room.jsx";
 import HeroLights from "./HeroLights.jsx";
-import Particles from "./Particles.jsx";
 
 const HeroExperience = () => {
     const isTablet = useMediaQuery({query: '(max-width: 1024px)'});
@@ -24,12 +23,12 @@ const HeroExperience = () => {
                 maxPolarAngle={Math.PI / 2}
             />
 
-            <HeroLights />
             <group
              scale={isMobile? 0.7 : 1 }
              position={[0, -3.5, 0]}
              rotation={[0, -Math.PI / 4, 0]}
             >
+                <HeroLights />
                 <Room/>
             </group>
 

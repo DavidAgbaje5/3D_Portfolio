@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
+import ContactExperience from "../components/models/Contact/ContactExperience";
 
 
 const Contact = () => {

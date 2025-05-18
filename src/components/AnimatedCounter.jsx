@@ -11,7 +11,7 @@ const AnimatedCounter = () => {
             <div className="mx-auto grid-4-cols mt-14 relative">
                 {counterItems.map((item) => (
                     <div className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center ">
-                        <div key={counterItems.label} className="counter-number text-white text-5xl font-bold mb-2 break-words">
+                        <div key={counterItems.label} className="counter-number text-white text-4xl font-bold mb-2 break-words">
                             {item.value === null ? item.suffix :
                                 <CountUp end={item.value} suffix={item.suffix} decimals={item.decimalPlaces} duration={7} />
                             }

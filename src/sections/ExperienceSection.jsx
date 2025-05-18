@@ -66,7 +66,7 @@ const ExperienceSection = () => {
                 />
 
             </div>
-            <div className="mt-32 relative flex flex-col xl:flex-row gap-6 justify-center items-center">
+            <div className="mt-20 relative flex flex-col xl:flex-row gap-6 justify-center items-center">
                 <div className="relative xl:w-2/6 xl:space-y-32 space-y-10 ">
                     {expCards.map((card) => (
                         <div key={card.title} className="exp-card-wrapper">
